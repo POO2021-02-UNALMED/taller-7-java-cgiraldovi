@@ -1,15 +1,17 @@
 package comunicacion;
 
-public class Alfabeto {
+public class Alfabeto extends Pictograma{
     private String[] letras;
     private String interpretacion;
 
     //constructor + getter and setter
 
-    public Alfabeto(String interpretacion, String[] letras) {
+    public Alfabeto(String origen, String[] letras, String interpretacion) {
+        super(origen);
         this.letras = letras;
         this.interpretacion = interpretacion;
     }
+
 
     public String[] getLetras() {
         return letras;
@@ -31,15 +33,24 @@ public class Alfabeto {
 
 
      public int cantidadLetras(){
-        return 1;
+        return letras.length;
      }
 
      public String interpretacion(){
-        return "";
+        return this.interpretacion;
      }
 
      public String toString(){
-        return "";
+        String resultado = "";
+
+        for (int i = 0; i < letras.length; i ++){
+            if (i!= letras.length-1){
+                resultado = resultado + letras[i] + ", ";
+            } else{
+                resultado = resultado + letras[i];
+            }
+        }
+        return resultado;
      }
 
 

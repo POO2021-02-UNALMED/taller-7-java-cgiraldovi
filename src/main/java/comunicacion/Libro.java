@@ -1,6 +1,6 @@
 package comunicacion;
 
-public class Libro extends Escrito{
+public class Libro extends Escrito {
     private String co_autor;
     private String editorial;
     private String edicion;
@@ -17,23 +17,55 @@ public class Libro extends Escrito{
         this.interpretacion = interpretacion;
     }
 
+    public String getCo_autor() {
+        return co_autor;
+    }
 
+    public void setCo_autor(String co_autor) {
+        this.co_autor = co_autor;
+    }
+
+    public String getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
+    }
+
+    public String getEdicion() {
+        return edicion;
+    }
+
+    public void setEdicion(String edicion) {
+        this.edicion = edicion;
+    }
+
+    public String getInterpretacion() {
+        return interpretacion;
+    }
+
+    public void setInterpretacion(String interpretacion) {
+        this.interpretacion = interpretacion;
+    }
 
     //fin getter and setter
 
     @Override
     int palabrasTotales(int palabrasPagina) {
-        return 0;
+        return 2 * palabrasPagina;
     }
 
     @Override
     String interpretacion() {
-        return null;
+
+        return this.interpretacion;
     }
 
     @Override
     public String toString() {
-        return null;
+        return getOrigen() + getTitulo() + getAutor() + String.valueOf(getPaginas())
+                + getCo_autor() + getEditorial() + getEdicion() + getInterpretacion();
     }
 
 }

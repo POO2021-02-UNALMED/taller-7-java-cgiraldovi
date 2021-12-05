@@ -6,6 +6,10 @@ public class Tesis extends Escrito{
     private String conclusion;
     private String referencias;
     private String interpretacion;
+
+
+    //constructor + getter and setter
+
     public Tesis(String origen, String titulo, String autor, int paginas,
                  String idea, String[] argumentos, String conclusion, String referencias,
                  String interpretacion) {
@@ -17,14 +21,56 @@ public class Tesis extends Escrito{
         this.interpretacion = interpretacion;
     }
 
+    public String getIdea() {
+        return idea;
+    }
+
+    public void setIdea(String idea) {
+        this.idea = idea;
+    }
+
+    public String[] getArgumentos() {
+        return argumentos;
+    }
+
+    public void setArgumentos(String[] argumentos) {
+        this.argumentos = argumentos;
+    }
+
+    public String getConclusion() {
+        return conclusion;
+    }
+
+    public void setConclusion(String conclusion) {
+        this.conclusion = conclusion;
+    }
+
+    public String getReferencias() {
+        return referencias;
+    }
+
+    public void setReferencias(String referencias) {
+        this.referencias = referencias;
+    }
+
+    public String getInterpretacion() {
+        return interpretacion;
+    }
+
+    public void setInterpretacion(String interpretacion) {
+        this.interpretacion = interpretacion;
+    }
+
+    //fin constructor getter and setter
+
     @Override
     int palabrasTotales(int palabrasPagina) {
-        return 0;
+        return 5 * palabrasPagina;
     }
 
     @Override
     String interpretacion() {
-        return null;
+        return this.interpretacion;
     }
 
     @Override
