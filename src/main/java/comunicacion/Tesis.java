@@ -64,12 +64,12 @@ public class Tesis extends Escrito{
     //fin constructor getter and setter
 
     @Override
-    int palabrasTotales(int palabrasPagina) {
+    public int palabrasTotales(int palabrasPagina) {
         return 5 * palabrasPagina;
     }
 
     @Override
-    String interpretacion() {
+    public String interpretacion() {
         return this.interpretacion;
     }
 
